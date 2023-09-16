@@ -1,12 +1,25 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectCars } from "../redux/cars/selectorsCars";
+import { useEffect, useState } from "react";
+import { getAllCars } from "../redux/cars/operationsCars";
+import CarCard from "../components/CarCard/CarCard";
 
 const Catalog = () => {
 const cars = useSelector(selectCars);
-console.log(cars);
+const [page, setPage] = useState(1)
+const dispatch = useDispatch();
+
+
+useEffect(() => {
+  dispatch(getAllCars(page))
+
+}, [dispatch, page])
+
 
   return (
-    <div>Catalog</div>
+    <div>   
+      <CarCard data={cars}> </CarCard>
+    </div>
   )
 }
 

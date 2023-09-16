@@ -4,9 +4,9 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 axios.defaults.baseURL = 'https://64932a4d428c3d2035d17180.mockapi.io';
 
 export const getAllCars = createAsyncThunk('cars/getAll',
-async(page, {rejectWithValue}) => {
+async(_, {rejectWithValue}) => {
     try {
-        const {data} = axios.get(`advert?p=${page}&l=8`)
+        const {data} = await axios.get('/advert')
         console.log(data);
         return data;
         
