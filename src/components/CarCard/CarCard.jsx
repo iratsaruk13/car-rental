@@ -1,4 +1,4 @@
-import { CarContainer, CarImg, CarInfoItem, CarInfoList, CarName, CarNameAccent, LearnMoreBtn, NextCarInfoList, TitleWrapper } from "./CarCard.styled";
+import { CarContainer, CarImg, CarInfoItem, CarInfoList, CarNameAccent, LearnMoreBtn, NextCarInfoList, TitleWrapper } from "./CarCard.styled";
 
 const CarCard = ({data}) => {
     console.log(data);
