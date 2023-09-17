@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CarContainer, CarImg, CarInfoItem, CarInfoList, CarNameAccent, LearnMoreBtn, NextCarInfoList, TitleWrapper } from "./CarCard.styled";
+import { AccentItem, CarContainer, CarDescription, CarImg, CarInfoItem, CarInfoList, CarNameAccent, CardSubtitle, ConditionItem, LearnMoreBtn, NextCarInfoList, RentalBtn, RentalConditionsList, TitleWrapper } from "./CarCard.styled";
 import Modal from "../Modal/Modal";
 
 const CarCard = ({data}) => {
@@ -19,9 +19,8 @@ const CarCard = ({data}) => {
         engineSize,
         description,
         accessories,
-        age,
         rentalConditions,
-                mileage,
+        mileage,
       } = data;
 
 const [showModal, setShowModal] = useState(false);
@@ -73,39 +72,36 @@ const handleCloseModal = () => {
                 <NextCarInfoList>
                 <CarInfoItem>Fuel Consumption: {fuelConsumption}</CarInfoItem>
                 <CarInfoItem>Engine Size: {engineSize}</CarInfoItem>
-                <p>
+                <CarDescription>
                     {description}
-                </p>
-                <h3>
+                </CarDescription>
+                <CardSubtitle>
                 Accessories and functionalities:
-                </h3>
-                <ul>
+                </CardSubtitle>
+                <CarInfoList>
                     {accessories.map(item => (
-                        <li key={item}>{item}</li>
+                        <CarInfoItem key={item}>{item}</CarInfoItem>
                     ))}
-                </ul>
+                </CarInfoList>
 
-                <ul>
+                <NextCarInfoList>
                     {functionalities.map(item => (
-                        <li key={item}>{item}</li>
+                        <CarInfoItem key={item}>{item}</CarInfoItem>
                     ))}
-                </ul>
-
-                <h3>
-                Rental Conditions:
-                </h3>
-                <ul>
-                    <li>Minimum age: {age} </li>
-                    <li>{rentalConditions[1]} </li>
-                    <li>{rentalConditions[2]} </li>
-                    <li>Mileage: {mileage}  </li>
-                    <li>Price: {rentalPrice} </li>
-
-
-                </ul>
-                
                 </NextCarInfoList>
 
+                <CardSubtitle> Rental Conditions:
+                </CardSubtitle>
+                <RentalConditionsList>
+                    <ConditionItem>{rentalConditions[0]} </ConditionItem>
+                    <ConditionItem>{rentalConditions[1]} </ConditionItem>
+                    <ConditionItem>{rentalConditions[2]} </ConditionItem>
+                    <ConditionItem>Mileage: <AccentItem>{mileage}</AccentItem>   </ConditionItem>
+                    <ConditionItem>Price: <AccentItem>{rentalPrice}</AccentItem>  </ConditionItem>
+                </RentalConditionsList>
+                
+                </NextCarInfoList>
+                <RentalBtn href="tel:+380730000000">Rental car</RentalBtn>
 
             </Modal>
         )}

@@ -9,6 +9,15 @@ body {
   background-color: #fff;
 }
 
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope-Regular'), local('Manrope-Medium'),
+    local('Manrope-SemiBold'),
+    url('./fonts/Manrope-Regular.ttf') format('truetype'),
+    url('./fonts/Manrope-Medium.ttf') format('truetype'),
+    url('./fonts/Manrope-SemiBold.ttf') format('truetype');
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
