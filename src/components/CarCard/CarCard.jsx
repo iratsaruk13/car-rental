@@ -10,6 +10,7 @@ import {
   CarNameAccent,
   CardSubtitle,
   ConditionItem,
+  FavoriteSvg,
   LearnMoreBtn,
   NextCarInfoList,
   RentalBtn,
@@ -20,8 +21,8 @@ import Modal from '../Modal/Modal';
 import { addToFavorite, removeFromFavorite } from '../../redux/favorite/sliceFavorite';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorite } from '../../redux/favorite/selectorsFavorite';
-import heartfillIcon from '../../images/heartfill.png';
-import heartIcon from '../../images/heart.png'
+import heartfillIcon from '../../images/heartFill.svg';
+import heartIcon from '../../images/heart.svg'
 
 
 
@@ -73,11 +74,14 @@ const CarCard = ({ data }) => {
       <CarContainer key={id}>
         <BtnFavorite type='button' onClick={() => chooseFavorite(data)}>
             {favorite.some(car => car.id === data.id) ? (
-                
-                   <img src={heartfillIcon} alt='favorite'></img>
+                <FavoriteSvg>
+                  <use href={heartfillIcon + "#heart"}></use>
+                </FavoriteSvg>
         
             ) : (
-                 <img src={heartIcon} alt='favorite'></img>
+              <FavoriteSvg>
+              <use href={heartIcon + "#heart"}></use>
+            </FavoriteSvg>
                 
             )}
 

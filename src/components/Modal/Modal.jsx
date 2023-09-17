@@ -1,6 +1,7 @@
 import { createPortal } from "react-dom";
-import { CloseButton, ModalCard, Overlay } from "./Modal.styled";
+import { CloseButton, CloseSvg, ModalCard, Overlay } from "./Modal.styled";
 import { useEffect } from "react";
+import iconClose from '../../images/close.svg'
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -42,7 +43,10 @@ const Modal = ({onClose, children}) => {
         <Overlay onClick={handleBackdropClick}>
             <ModalCard>
                 <CloseButton type="button" onClick={handleCloseBtn}>
-×
+                  <CloseSvg width="24" height="24">
+                    <use href={iconClose + '#close'}> </use>
+                  </CloseSvg>
+{/* × */}
                 </CloseButton>
                 {children}
 

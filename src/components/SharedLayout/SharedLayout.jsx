@@ -2,11 +2,11 @@ import React from 'react'
 import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import Loader from '../Loader/Loader'
-import { Header, Link } from './SharedLayout.styled'
+import { Container, Header, Link } from './SharedLayout.styled'
 
 const SharedLayout = () => {
   return (
-    <div>
+    <Container>
         <Header>
         <nav>
   <Link to="/">Home</Link>
@@ -19,7 +19,7 @@ const SharedLayout = () => {
                 <Outlet />
             </main>
         </Suspense>
-        </div>
+        </Container>
   )
 }
 

@@ -33,19 +33,27 @@ export const CloseButton = styled.button`
   align-items: center;
   top: 14px;
   right: 14px;
-  width: 24px;
-    height: 24px;
+  width: 30px;
+    height: 30px;
+    padding: 0;
   cursor: pointer;
   border-radius: 50%;
   border: transparent;
   background: transparent;
   font-size: 36px;
   color: #121417;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 
-  &:hover {
-    color: #3470FF;
-  }
+  
  
 
+`
+export const CloseSvg = styled.svg`
+  stroke: #121417;
+  width: 24px;
+  height: 24px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  &:hover {
+    stroke: #3470FF;
+    scale: 1.02;
+  }
 `

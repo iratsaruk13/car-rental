@@ -24,6 +24,16 @@ export const BtnFavorite = styled.button`
   padding: 0;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  
+`
+
+export const FavoriteSvg = styled.svg`
+  width: 18px;
+    height: 18px;
+    fill: transparent;
+    stroke: white;
+    fill: transparent;
 `
 
 export const CarImg = styled.img`
