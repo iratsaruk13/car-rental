@@ -11,7 +11,6 @@ const CarCard = ({data}) => {
         rentalPrice,
         city, 
         country,
-        address,
         rentalCompany,
         type,
         functionalities

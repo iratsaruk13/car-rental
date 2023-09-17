@@ -5,17 +5,22 @@ width: 274px;
 height: 426px;
 list-style: none;
 border-radius: 14px;
-transition: box-shadow 250ms;
-&:hover{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;;
+transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+&:hover {
+    scale: 1.01;
+  }
 
-}
 `
 export const CarImg = styled.img`
       border-radius: 14px;
       object-fit: cover;
   object-position: center;
   margin-bottom: 14px;
+  transition: box-shadow 250ms;
+  &:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;;
+
+}
 `
 export const TitleWrapper = styled.div`
     display: flex;
