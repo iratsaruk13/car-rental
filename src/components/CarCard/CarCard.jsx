@@ -14,7 +14,14 @@ const CarCard = ({data}) => {
         country,
         rentalCompany,
         type,
-        functionalities
+        functionalities,
+        fuelConsumption, 
+        engineSize,
+        description,
+        accessories,
+        age,
+        rentalConditions,
+                mileage,
       } = data;
 
 const [showModal, setShowModal] = useState(false);
@@ -50,7 +57,57 @@ const handleCloseModal = () => {
                 <LearnMoreBtn type="button" onClick={handleOpenModal}> Learn more</LearnMoreBtn>
         </CarContainer>
         {showModal && (
-            <Modal onClose={handleCloseModal}></Modal>
+            <Modal onClose={handleCloseModal}>
+                <CarImg src={img} alt={`${make} ${model}`} width={461} height={248}/>
+                <TitleWrapper>
+                <p>{make} <CarNameAccent>{model}</CarNameAccent>, {year} </p>
+                {rentalPrice}
+                </TitleWrapper>
+                <CarInfoList>
+                    <CarInfoItem>{city}</CarInfoItem>
+                    <CarInfoItem>{country}</CarInfoItem>
+                    <CarInfoItem>Id: {id}</CarInfoItem>
+                    <CarInfoItem>Year: {year}</CarInfoItem>
+                    <CarInfoItem>Type: {type}</CarInfoItem>
+                </CarInfoList>
+                <NextCarInfoList>
+                <CarInfoItem>Fuel Consumption: {fuelConsumption}</CarInfoItem>
+                <CarInfoItem>Engine Size: {engineSize}</CarInfoItem>
+                <p>
+                    {description}
+                </p>
+                <h3>
+                Accessories and functionalities:
+                </h3>
+                <ul>
+                    {accessories.map(item => (
+                        <li key={item}>{item}</li>
+                    ))}
+                </ul>
+
+                <ul>
+                    {functionalities.map(item => (
+                        <li key={item}>{item}</li>
+                    ))}
+                </ul>
+
+                <h3>
+                Rental Conditions:
+                </h3>
+                <ul>
+                    <li>Minimum age: {age} </li>
+                    <li>{rentalConditions[1]} </li>
+                    <li>{rentalConditions[2]} </li>
+                    <li>Mileage: {mileage}  </li>
+                    <li>Price: {rentalPrice} </li>
+
+
+                </ul>
+                
+                </NextCarInfoList>
+
+
+            </Modal>
         )}
    </>
   );

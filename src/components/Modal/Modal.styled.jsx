@@ -14,14 +14,16 @@ export const Overlay = styled.div`
 `
 
 export const ModalCard = styled.div`
-    width: 541px;
-    height: 752px;
+    max-width: 541px;
+    max-height: 752px;
     background: #FFFFFF;
     border-radius: 24px;
     position: absolute;
     top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
+
 `
 
 export const CloseButton = styled.button`
