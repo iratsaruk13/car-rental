@@ -3,6 +3,7 @@ import { selectCars } from "../redux/cars/selectorsCars";
 import { useEffect, useState } from "react";
 import { getAllCars } from "../redux/cars/operationsCars";
 import CarList from "../components/CarList/CarList";
+import Modal from "../components/Modal/Modal";
 
 const Catalog = () => {
 const cars = useSelector(selectCars);
