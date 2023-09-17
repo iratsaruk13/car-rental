@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/car-rental/static/css/main.b619b1f6.css",
-    "main.js": "/car-rental/static/js/main.9621ce2b.js",
+    "main.js": "/car-rental/static/js/main.689555f1.js",
     "static/js/415.e5343d69.chunk.js": "/car-rental/static/js/415.e5343d69.chunk.js",
     "static/js/253.79e92a60.chunk.js": "/car-rental/static/js/253.79e92a60.chunk.js",
     "static/js/513.060f1849.chunk.js": "/car-rental/static/js/513.060f1849.chunk.js",
     "static/js/111.4d3b5095.chunk.js": "/car-rental/static/js/111.4d3b5095.chunk.js",
-    "static/js/408.27d84d1c.chunk.js": "/car-rental/static/js/408.27d84d1c.chunk.js",
+    "static/js/408.3621bf0e.chunk.js": "/car-rental/static/js/408.3621bf0e.chunk.js",
     "static/media/Manrope-SemiBold.ttf": "/car-rental/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
     "static/media/Manrope-Regular.ttf": "/car-rental/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
     "static/media/Manrope-Medium.ttf": "/car-rental/static/media/Manrope-Medium.101a50f661e51b761ca1.ttf",
@@ -15,15 +15,15 @@
     "index.html": "/car-rental/index.html",
     "static/media/close.svg": "/car-rental/static/media/close.207d302dcbc0e4eda87f4e017e001a6e.svg",
     "main.b619b1f6.css.map": "/car-rental/static/css/main.b619b1f6.css.map",
-    "main.9621ce2b.js.map": "/car-rental/static/js/main.9621ce2b.js.map",
+    "main.689555f1.js.map": "/car-rental/static/js/main.689555f1.js.map",
     "415.e5343d69.chunk.js.map": "/car-rental/static/js/415.e5343d69.chunk.js.map",
     "253.79e92a60.chunk.js.map": "/car-rental/static/js/253.79e92a60.chunk.js.map",
     "513.060f1849.chunk.js.map": "/car-rental/static/js/513.060f1849.chunk.js.map",
     "111.4d3b5095.chunk.js.map": "/car-rental/static/js/111.4d3b5095.chunk.js.map",
-    "408.27d84d1c.chunk.js.map": "/car-rental/static/js/408.27d84d1c.chunk.js.map"
+    "408.3621bf0e.chunk.js.map": "/car-rental/static/js/408.3621bf0e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b619b1f6.css",
-    "static/js/main.9621ce2b.js"
+    "static/js/main.689555f1.js"
   ]
 }
