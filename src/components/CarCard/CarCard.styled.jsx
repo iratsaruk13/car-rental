@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CarContainer = styled.li`
+position: relative;
 width: 274px;
 height: 426px;
 list-style: none;
@@ -9,8 +10,22 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 &:hover {
     scale: 1.01;
   }
-
 `
+
+export const BtnFavorite = styled.button`
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  background-color: transparent;
+  border: transparent;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+`
+
 export const CarImg = styled.img`
       border-radius: 14px;
       object-fit: cover;
