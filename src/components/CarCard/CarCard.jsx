@@ -68,6 +68,10 @@ const CarCard = ({ data }) => {
     }
   };
 
+  const formatMileage = mileage => {
+    return mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   return (
     <>
       <CarContainer key={id}>
@@ -143,7 +147,7 @@ const CarCard = ({ data }) => {
               <ConditionItem>{rentalConditions[1]} </ConditionItem>
               <ConditionItem>{rentalConditions[2]} </ConditionItem>
               <ConditionItem>
-                Mileage: <AccentItem>{mileage}</AccentItem>{' '}
+                Mileage: <AccentItem>{formatMileage(mileage)}</AccentItem>{' '}
               </ConditionItem>
               <ConditionItem>
                 Price: <AccentItem>{rentalPrice}</AccentItem>{' '}
