@@ -18,13 +18,14 @@ import {
   TitleWrapper,
 } from './CarCard.styled';
 import Modal from '../Modal/Modal';
-import { addToFavorite, removeFromFavorite } from '../../redux/favorite/sliceFavorite';
+import {
+  addToFavorite,
+  removeFromFavorite,
+} from '../../redux/favorite/sliceFavorite';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorite } from '../../redux/favorite/selectorsFavorite';
 import heartfillIcon from '../../images/heartFill.svg';
-import heartIcon from '../../images/heart.svg'
-
-
+import heartIcon from '../../images/heart.svg';
 
 const CarCard = ({ data }) => {
   const {
@@ -61,31 +62,25 @@ const CarCard = ({ data }) => {
 
   const chooseFavorite = data => {
     if (!favorite.some(car => car.id === data.id)) {
-        dispatch(addToFavorite(data))
+      dispatch(addToFavorite(data));
+    } else {
+      dispatch(removeFromFavorite(data));
     }
-    else {
-      dispatch(removeFromFavorite(data))  
-    }
-  }
-
+  };
 
   return (
     <>
       <CarContainer key={id}>
-        <BtnFavorite type='button' onClick={() => chooseFavorite(data)}>
-            {favorite.some(car => car.id === data.id) ? (
-                <FavoriteSvg>
-                  <use href={heartfillIcon + "#heart"}></use>
-                </FavoriteSvg>
-        
-            ) : (
-              <FavoriteSvg>
-              <use href={heartIcon + "#heart"}></use>
+        <BtnFavorite type="button" onClick={() => chooseFavorite(data)}>
+          {favorite.some(car => car.id === data.id) ? (
+            <FavoriteSvg>
+              <use href={heartfillIcon + '#heart'}></use>
             </FavoriteSvg>
-                
-            )}
-
-            
+          ) : (
+            <FavoriteSvg>
+              <use href={heartIcon + '#heart'}></use>
+            </FavoriteSvg>
+          )}
         </BtnFavorite>
         <CarImg src={img} alt={`${make} ${model}`} width={274} height={268} />
         <TitleWrapper>
@@ -106,7 +101,6 @@ const CarCard = ({ data }) => {
           <CarInfoItem>{functionalities[0]}</CarInfoItem>
         </NextCarInfoList>
         <LearnMoreBtn type="button" onClick={handleOpenModal}>
-
           Learn more
         </LearnMoreBtn>
       </CarContainer>

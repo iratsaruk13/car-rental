@@ -1,11 +1,11 @@
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
-`
+`;
 
 export const Header = styled.header`
   display: flex;
@@ -31,10 +31,10 @@ export const Link = styled(NavLink)`
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
   &.active {
     color: white;
-    background-color: #3470FF;
+    background-color: #3470ff;
   }
   &:hover {
     color: white;
-    background-color: #3470FF;
+    background-color: #3470ff;
   }
 `;

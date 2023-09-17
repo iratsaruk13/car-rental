@@ -1,16 +1,15 @@
-import React from 'react'
+import { HomeContainer, HomeText, HomeTitle, StyledLink } from './Home.styled';
 
 const Home = () => {
   return (
-    <div>
-        <h1>
-            You need a car?
-        </h1>
-        <p>
-            Big or small we have them all!
-        </p>
-        </div>
-  )
-}
+    <HomeContainer>
+      <HomeTitle>You need a car?</HomeTitle>
+      <HomeText>Big or small we have them all!</HomeText>
+      <HomeText>
+        Go to the <StyledLink to="catalog">Catalog</StyledLink>
+      </HomeText>
+    </HomeContainer>
+  );
+};
 
-export default Home
+export default Home;

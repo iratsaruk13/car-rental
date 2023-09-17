@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CarsList = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+`;
