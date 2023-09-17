@@ -34,10 +34,10 @@ export const CarNameAccent = styled.span`
 export const CarInfoList = styled.ul`
     display: flex;
   flex-wrap: wrap;
+  color: #88898b;
 `
 
 export const CarInfoItem = styled.li`
-color: rgba(18, 20, 23, 0.5)
     font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
@@ -52,6 +52,7 @@ color: rgba(18, 20, 23, 0.5)
 export const NextCarInfoList = styled.ul`
      display: flex;
   flex-wrap: wrap;
+  color: #88898b;
   margin-bottom: 24px;
 `
 
@@ -65,6 +66,10 @@ export const LearnMoreBtn = styled.button`
     height: 44px;
     border: transparent;
     border-radius: 12px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
     &:hover{
         background: #0B44CD;

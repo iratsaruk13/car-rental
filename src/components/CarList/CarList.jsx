@@ -1,13 +1,14 @@
 import CarCard from "../CarCard/CarCard"
+import { CarsList } from "./CarList.styled"
 
 const CarList = ({data}) => {
   return (
-    <div>CarList
-        <ul>
+    <div>
+        <CarsList>
 {data.map(car => (
     <CarCard data={car} key={car.id} /> 
 ))}
-        </ul>
+ </CarsList>
     </div>
   )
 }

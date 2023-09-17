@@ -2,32 +2,45 @@ import { CarContainer, CarImg, CarInfoItem, CarInfoList, CarNameAccent, LearnMor
 
 const CarCard = ({data}) => {
     console.log(data);
+    const {
+        id,
+        img,
+        make,
+        model,
+        year,
+        rentalPrice,
+        city, 
+        country,
+        address,
+        rentalCompany,
+        type,
+        functionalities
+      } = data;
 
   return (
     <CarContainer>
-       {data.map((car) => (
-        <div key={car.id}>
-          <CarImg src={car.img} alt={`${car.make} ${car.model}`} width={274} height={268}/>
+      
+          <CarImg src={img} alt={`${make} ${model}`} width={274} height={268}/>
           <TitleWrapper>
-            <p>{car.make} <CarNameAccent>{car.model}</CarNameAccent>, {car.year} </p>
-            {car.rentalPrice}
+            <p>{make} <CarNameAccent>{model}</CarNameAccent>, {year} </p>
+            {rentalPrice}
             </TitleWrapper>
             <CarInfoList>
-                <CarInfoItem>{car.city}</CarInfoItem>
-                <CarInfoItem>{car.country}</CarInfoItem>
-                <CarInfoItem>{car.rentalCompany}</CarInfoItem>
+                <CarInfoItem>{city}</CarInfoItem>
+                <CarInfoItem>{country}</CarInfoItem>
+                <CarInfoItem>{rentalCompany}</CarInfoItem>
             </CarInfoList>
             <NextCarInfoList>
-            <CarInfoItem>{car.type}</CarInfoItem>
-            <CarInfoItem>{car.make}</CarInfoItem>
-            <CarInfoItem>{car.id}</CarInfoItem>
-            <CarInfoItem>{car.functionalities[0]}</CarInfoItem>
+            <CarInfoItem>{type}</CarInfoItem>
+            <CarInfoItem>{make}</CarInfoItem>
+            <CarInfoItem>{id}</CarInfoItem>
+            <CarInfoItem>{functionalities[0]}</CarInfoItem>
             </NextCarInfoList>
             <LearnMoreBtn type="button"> Learn more</LearnMoreBtn>
 
           
-        </div>
-      ))}
+     
+      
     </CarContainer>
   );
 };

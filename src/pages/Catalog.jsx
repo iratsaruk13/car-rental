@@ -2,7 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCars } from "../redux/cars/selectorsCars";
 import { useEffect, useState } from "react";
 import { getAllCars } from "../redux/cars/operationsCars";
-import CarCard from "../components/CarCard/CarCard";
+// import CarCard from "../components/CarCard/CarCard";
+import CarList from "../components/CarList/CarList";
 
 const Catalog = () => {
 const cars = useSelector(selectCars);
@@ -18,7 +19,8 @@ useEffect(() => {
 
   return (
     <div>   
-      <CarCard data={cars}> </CarCard>
+      <CarList data={cars}></CarList>
+      
     </div>
   )
 }
