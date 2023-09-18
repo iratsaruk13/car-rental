@@ -41,6 +41,9 @@ export const CloseButton = styled.button`
   background: transparent;
   font-size: 36px;
   color: #121417;
+  &:hover {
+    background: #dcecf8;
+  }
 `;
 export const CloseSvg = styled.svg`
   stroke: #121417;
@@ -49,6 +52,6 @@ export const CloseSvg = styled.svg`
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
   &:hover {
     stroke: #3470ff;
-    scale: 1.02;
+    scale: 1.03;
   }
 `;
