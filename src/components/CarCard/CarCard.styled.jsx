@@ -25,6 +25,7 @@ export const BtnFavorite = styled.button`
   justify-content: center;
   align-items: center;
   padding: 0;
+  cursor: pointer;
 `;
 
 export const FavoriteSvg = styled.svg`
@@ -101,6 +102,7 @@ export const LearnMoreBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
   &:hover {
     background: #0b44cd;
@@ -160,6 +162,7 @@ export const RentalBtn = styled.a`
   width: 168px;
   height: 44px;
   border-radius: 12px;
+  cursor: pointer;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
   &:hover {
     background: #0b44cd;
